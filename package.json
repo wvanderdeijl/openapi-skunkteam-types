@@ -1,0 +1,39 @@
+{
+    "name": "openapi-skunkteam-types",
+    "version": "1.0.0",
+    "description": "Generate OpenAPI schemas from @skunkteam/types",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wvanderdeijl/openapi-skunkteam-types.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/wvanderdeijl/openapi-skunkteam-types/issues"
+    },
+    "homepage": "https://github.com/wvanderdeijl/openapi-skunkteam-types#readme",
+    "peerDependencies": {
+        "@skunkteam/types": ">=4.0.0"
+    },
+    "devDependencies": {
+        "@skunkteam/types": "^4.0.3",
+        "@types/node": "^16.11.7",
+        "prettier": "^2.4.1",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.4.4"
+    },
+    "dependencies": {
+        "@apidevtools/swagger-parser": "^10.0.3",
+        "@types/js-yaml": "^4.0.4",
+        "@types/lodash": "^4.14.176",
+        "chalk": "^4.1.2",
+        "js-yaml": "^4.1.0",
+        "lodash": "^4.17.21",
+        "openapi-types": "^9.3.0",
+        "p-map": "^4.0.0"
+    }
+}

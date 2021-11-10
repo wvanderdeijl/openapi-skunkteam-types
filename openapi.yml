@@ -1,0 +1,26 @@
+openapi: 3.0.2
+info:
+  version: 1.0.7
+  title: Swagger Petstore - OpenAPI 3.0
+paths:
+  /pet:
+    post:
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                x-skunkteam-type: ./types.ts#Pet
+                $ref: ./openapi.types.yml#/components/schemas/Pet
+        '405':
+          description: Invalid input
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              x-skunkteam-type: ./types.ts#Pet
+              $ref: ./openapi.types.yml#/components/schemas/Pet
+  /user:
+    $ref: ./openapi-ref.yml#/paths/~1user

@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  version: 1.0.7
+  title: Types for Swagger Petstore - OpenAPI 3.0
+paths: {}
+components:
+  schemas:
+    int:
+      title: int
+      type: integer
+    Category:
+      description: The Category
+      title: Category
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/int'
+        name:
+          type: string
+          example: Dogs
+    Tag:
+      title: Tag
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/int'
+        name:
+          type: string
+    Pet:
+      description: A Pet
+      title: Pet
+      type: object
+      properties:
+        name:
+          type: string
+          example: doggie
+        photoUrls:
+          type: array
+          items:
+            type: string
+        id:
+          $ref: '#/components/schemas/int'
+        category:
+          $ref: '#/components/schemas/Category'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        status:
+          type: string
+          enum:
+            - available
+            - pending
+            - sold
+          description: pet status in the store
+      required:
+        - name
+        - photoUrls

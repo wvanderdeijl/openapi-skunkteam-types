@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  version: 1.0.7
+  title: Types for Swagger Petstore - OpenAPI 3.0
+paths: {}
+components:
+  schemas:
+    int:
+      title: int
+      type: integer
+    User:
+      deprecated: true
+      title: User
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/int'
+        username:
+          type: string
+          example: theUser
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: James
+        email:
+          type: string
+          example: john@email.com
+        password:
+          type: string
+          example: '12345'
+        phone:
+          type: string
+        userStatus:
+          $ref: '#/components/schemas/int'
